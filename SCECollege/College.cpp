@@ -238,12 +238,13 @@ void College::print_all() const
 
 void College::print_excellent() const
 {
+	/*This function using the Outstanding method for student of B.A and M.A, i will sort the array
+	and the function will return true for the outstanding students such as students
+	at B.A with AVG 90+, and M.A student are allways true.*/
 	for (int i = 0; i < size_std; i++)
 	{
 		if (array_std[i]->if_Outstanding() == true)
-		{
 			array_std[i]->Student::print();
-		}
 	}
 }
 
