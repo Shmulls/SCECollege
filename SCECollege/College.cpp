@@ -200,7 +200,7 @@ bool College::add_grade(long id, char* course_name, char* lecturer, int grade)
 						return true;
 					}
 				}
-
+				
 				Course* new_arr;
 				new_arr = new Course[sizeof(temp->getCourse()) + 1];
 				if (new_arr == NULL)
@@ -209,9 +209,9 @@ bool College::add_grade(long id, char* course_name, char* lecturer, int grade)
 					return false;
 				}
 				
-				for (int i = 0; i < temp->getSize(); i++)
+				for (int j = 0; j < temp->getSize(); j++)
 				{
-					new_arr[i] = temp->getCourse()[i];
+					new_arr[j] = temp->getCourse()[j];
 				}
 				new_arr[temp->getSize()] = Course(course_name, lecturer, grade);
 
